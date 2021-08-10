@@ -42,9 +42,8 @@ def sum(name):
     print(sum_)
 
 
-print(ord('0'))
 while True:
-    print("Input1:")
+    print("Input:")
     inp = input()
     if len(inp) == 0:
         break
