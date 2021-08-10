@@ -14,24 +14,24 @@
 '''
 
 
-def sum(name):
-    min = 0
+def my_sum(name):
+    min_ = 0
     tmp = ''
     sum_ = 0
     for i in range(0, len(name)):
         if name[i] == '-' and ord(str(name[i+1])) in range(48, 58):
-            min = 1
+            min_ = 1
         elif ord(str(name[i])) in range(48, 58):
             tmp = tmp + name[i]
         elif tmp != '':
-            if min == 1:
+            if min_ == 1:
                 sum_ -= int(tmp)
             else:
                 sum_ += int(tmp)
-            min = 0
+            min_ = 0
             tmp = ''
     if tmp != '':
-        if min == 1:
+        if min_ == 1:
             sum_ -= int(tmp)
         else:
             sum_ += int(tmp)
@@ -44,5 +44,5 @@ while True:
     if len(inp) == 0:
         break
     else:
-        sum(inp)
+        my_sum(inp)
 print("Exit")
