@@ -21,12 +21,12 @@ def my_min(name):
     name = [int(item) for item in name]
     name.sort()
     tmp = 0
-    for i in range(0, len(name)):
+    for i in range(0, len(name)-1):
         if int(name[i+1])-int(name[i]) >= 2:
             tmp = int(name[i])+1
             break
     if tmp == 0:
-        tmp = name[len(name)]+1
+        tmp = name[len(name)-1]+1
     print(tmp)
 
 
