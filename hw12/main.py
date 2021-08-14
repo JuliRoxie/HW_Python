@@ -7,12 +7,12 @@
 
 def fib(n):
     k = []
-    for i in range (0, n):
+    for i in range(0, n):
         if i == 0 or i == 1:
             k.append(1)
         else:
             k.append(k[i-2]+k[i-1])
-    print(k)
+    return k[len(k)-1]
 
 print("n:")
-fib(int(input()))
+print(fib(int(input())))
