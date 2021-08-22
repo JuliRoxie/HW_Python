@@ -25,7 +25,6 @@ def my_list(name):
     print(' '.join(list_))
 
 
-print('Input:')
-inp = input()
+inp = input('Input:' )
 my_list(inp)
 
