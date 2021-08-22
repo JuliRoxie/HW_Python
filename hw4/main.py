@@ -39,8 +39,7 @@ def my_sum(name):
 
 
 while True:
-    print("Input:")
-    inp = input()
+    inp = input("Input: ")
     if len(inp) == 0:
         break
     else:
