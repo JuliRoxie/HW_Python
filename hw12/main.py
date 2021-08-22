@@ -14,5 +14,4 @@ def fib(n):
             k.append(k[i-2]+k[i-1])
     return k[len(k)-1]
 
-print("n:")
-print(fib(int(input())))
+print(fib(int(input("n:"))))
