@@ -20,6 +20,7 @@ def geo_coord(st):
     geolocator = Nominatim(user_agent="google")
     location = geolocator.reverse(st)
     print('Location:', location.address)
+    print(st)
     st = st.replace(" ", ",")
     print('Goggle Maps URL:', f'https://www.google.com/maps/search/?api=1&query={st}')
 
