@@ -25,7 +25,7 @@ def my_min(name):
             tmp = int(name[i])+1
             break
     if tmp == 0:
-        tmp = name[len(name)-1]+1
+        tmp = name[0]-1
     print(tmp)
 
 
