@@ -31,7 +31,7 @@ def passwd():
                 mass2.append(1)
     for i in range(0, len(mass1)):
         print(mass1[i], '-', mass2[i])
-    file.close
+    file.close()
 
 
 def group():
@@ -64,8 +64,12 @@ def group():
             for i in range(0, len(k)):
                 if k[i] in mass1:
                     k[i] = mass2[mass1.index(k[i])]
-            print(line[0] + ":" + mass2[mass1.index(line[0])] + "   sudo: " + ", ".join(k))
-    file.close
+            if k != ['']:
+                print(line[0] + ":" + mass2[mass1.index(line[0])] + "   UID: " + ", ".join(k))
+            else:
+                print(line[0] + ":" + mass2[mass1.index(line[0])])
+
+    file.close()
 
 
 print("Количество пользователей, использующих интерпретаторы-оболочки:")
