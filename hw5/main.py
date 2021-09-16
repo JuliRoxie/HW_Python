@@ -24,8 +24,10 @@ def my_min(name):
         if int(name[i+1])-int(name[i]) >= 2:
             tmp = int(name[i])+1
             break
-    if tmp == 0:
+    if tmp == 0 and name[0]-1 != 0:
         tmp = name[0]-1
+    elif tmp == 0 and name[0]-1 == 0:
+        tmp = name[len(name)-1] + 1
     print(tmp)
 
 
