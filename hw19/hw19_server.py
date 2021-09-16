@@ -24,12 +24,17 @@ while True:
         d = server.recvfrom(1024)
     except socket.timeout:
         break
-    st = str(d[0].decode()).split(' ')
+    st = str(d[0].decode()).split(':')
+    myStr = ' '.join(st)
+    st = myStr.split(' ')
     if st[0] == 'ADD':
         DNS.append([st[1], st[2]])
         server.sendto('Append.'.encode(), d[1])
-    else:
+    elif st[0] == 'CHANGE':
         for i in DNS:
-            if d[0].decode() == i[0]:
-                server.sendto(i[1].encode(), d[1])
+            if st[1] == i[0]:
+                i[1] = st[2]
+                server.sendto('Changed.'.encode(), d[1])
+    else:
+        server.sendto('Wrong entry.'.encode(), d[1])
 server.close()

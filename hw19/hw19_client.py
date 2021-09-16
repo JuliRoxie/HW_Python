@@ -12,6 +12,8 @@ host = 'localhost'
 port = 7777
 client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 #msg = input('Enter message to send: ')
+print('print "ADD "domain.name":ip-address" if you want to add route')
+print('print "CHANGE "domain.name":ip-address" if you want to change route')
 while True:
     inp = input("DNS request: ")
     if inp == "exit":
