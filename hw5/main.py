@@ -20,15 +20,21 @@ def my_min(name):
     name = [int(item) for item in name]
     name.sort()
     tmp = 0
-    for i in range(0, len(name)-1):
-        if int(name[i+1])-int(name[i]) >= 2:
-            tmp = int(name[i])+1
-            break
-    if tmp == 0 and name[0]-1 != 0:
-        tmp = name[0]-1
-    elif tmp == 0 and name[0]-1 == 0:
-        tmp = name[len(name)-1] + 1
-    print(tmp)
+    # for i in range(0, len(name)-1):
+    #     if int(name[i+1])-int(name[i]) >= 2:
+    #         tmp = int(name[i])+1
+    #         break
+    for i in range(1, len(name) + 2):
+        if i not in name:
+            print(i)
+            return i
+    # if tmp != 0:
+    #     return tmp
+    # if name[0] > 1:
+    #     tmp = 1
+    # elif name[0] == 1:
+    #     tmp = name[len(name)-1] + 1
+    # print(tmp)
 
 
 while True:
