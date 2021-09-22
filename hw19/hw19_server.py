@@ -35,6 +35,14 @@ while True:
             if st[1] == i[0]:
                 i[1] = st[2]
                 server.sendto('Changed.'.encode(), d[1])
+    elif len(st) == 1:
+        er = 0
+        for i in range(0, len(DNS)):
+            if st[0] == DNS[i][0]:
+                server.sendto(DNS[i][1].encode(), d[1])
+                er = 1
+        if er == 0:
+            server.sendto('No such route'.encode(), d[1])
     else:
         server.sendto('Wrong entry.'.encode(), d[1])
 server.close()
