@@ -28,7 +28,7 @@ def merge(a, b):
                 tmp = lst[j]
                 lst[j] = lst[j + 1]
                 lst[j+1] = tmp
-    return lst
+    return iter(lst)
 
 
 print(list(merge((x for x in range(1, 4)), (x for x in range(2, 5)))) == [1, 2, 2, 3, 3, 4])

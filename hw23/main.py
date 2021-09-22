@@ -21,6 +21,5 @@ print(array([4, 3, 2]))
 print(array([2, 3, 5]))
 
 ar = array([2, 2, 2])
-print(ar)
 ar[1][1][1] = 'x'
 print(ar)
