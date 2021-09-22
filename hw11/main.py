@@ -29,24 +29,23 @@ def letters_range(min, max, per=1):
     i = ord(min)
     lst = []
     if max == min:
-        print(lst)
-        return
+        return lst
     while True:
         lst.append(chr(i))
         i += per
         if (per > 0 and i >= ord(max)) or (per < 0 and i <= ord(max)):
             break
-    print(lst)
+    return lst
 
 
-letters_range('b', 'w', 2)
+print(letters_range('b', 'w', 2))
 
-letters_range('a', 'g')
+print(letters_range('a', 'g'))
 
-letters_range('g', 'p')
+print(letters_range('g', 'p'))
 
-letters_range('p', 'g', -2)
+print(letters_range('p', 'g', -2))
 
-letters_range('a', 'a')
+print(letters_range('a', 'a'))
 
 
